@@ -1,0 +1,36 @@
+{
+  "name": "theaccountabilityreportpodcast-site",
+  "version": "0.0.1",
+  "description": "Official website repository for The Accountability Report Podcast, a public-interest investigative podcast focused on fraud awareness, identity theft documentation, digital misuse, consumer protection concerns, and accountability reporting.",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "check": "node --check index.js"
+  },
+  "keywords": [
+    "podcast",
+    "investigative-reporting",
+    "consumer-protection",
+    "identity-theft",
+    "fraud-awareness",
+    "accountability"
+  ],
+  "author": "Sarai Hannah Ajai",
+  "license": "ISC",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "dotenv": "^16.4.7",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "helmet": "^8.0.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

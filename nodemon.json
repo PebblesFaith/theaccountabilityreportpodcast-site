@@ -1,0 +1,17 @@
+{
+  "watch": [
+    "app.js",
+    "routes",
+    "views",
+    "public"
+  ],
+  "ext": "js,ejs,css,json",
+  "ignore": [
+    "node_modules",
+    ".git",
+    "public/assets",
+    "data",
+    "logs"
+  ],
+  "exec": "node app.js"
+}
