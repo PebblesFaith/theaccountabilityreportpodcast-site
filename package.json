@@ -2,12 +2,12 @@
   "name": "theaccountabilityreportpodcast-site",
   "version": "0.0.1",
   "description": "Official website repository for The Accountability Report Podcast, a public-interest investigative podcast focused on fraud awareness, identity theft documentation, digital misuse, consumer protection concerns, and accountability reporting.",
-  "main": "index.js",
+  "main": "app.js",
   "private": true,
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js",
-    "check": "node --check index.js"
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "check": "node --check app.js"
   },
   "keywords": [
     "podcast",

@@ -1,0 +1,103 @@
+<!-- views/partials/header.ejs -->
+<%
+  const siteName = "The Accountability Report Podcast";
+
+  const resolvedPageTitle =
+    typeof pageTitle === "string" && pageTitle.trim().length > 0
+      ? `${pageTitle} | ${siteName}`
+      : siteName;
+
+  const resolvedMetaDescription =
+    typeof metaDescription === "string" && metaDescription.trim().length > 0
+      ? metaDescription
+      : "Investigative reporting on fraud, identity theft, digital misuse, consumer protection, and accountability.";
+
+  const activePage =
+    typeof activeNav === "string" && activeNav.trim().length > 0
+      ? activeNav
+      : "";
+
+  const bodyClass =
+    typeof pageClass === "string" && pageClass.trim().length > 0
+      ? pageClass
+      : "standard-page";
+
+  const assetVersion = "20260601-lovable-font-button-polish-01";
+%>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="<%= resolvedMetaDescription %>">
+  <meta name="author" content="Sarai Hannah Ajai">
+
+  <meta http-equiv="Cache-Control" content="no-store">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
+  <meta property="og:title" content="<%= resolvedPageTitle %>">
+  <meta property="og:description" content="<%= resolvedMetaDescription %>">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="<%= siteName %>">
+
+  <title><%= resolvedPageTitle %></title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="/styles/theme.css?v=<%= assetVersion %>">
+  <link rel="stylesheet" type="text/css" href="/styles/header.css?v=<%= assetVersion %>">
+  <link rel="stylesheet" type="text/css" href="/styles/footer.css?v=<%= assetVersion %>">
+  <link rel="stylesheet" type="text/css" href="/styles/main.css?v=<%= assetVersion %>">
+  <link rel="stylesheet" type="text/css" href="/styles/lovable-polish.css?v=<%= assetVersion %>">
+</head>
+
+<body class="<%= bodyClass %>">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header" role="banner">
+    <div class="site-header__inner site-container">
+      <a class="site-header__brand" href="/" aria-label="The Accountability Report Podcast home">
+        <span class="site-header__brand-mark" aria-hidden="true">
+          <svg class="site-header__brand-icon" viewBox="0 0 24 24" role="img" focusable="false">
+            <path d="M12 14.25c1.74 0 3.15-1.41 3.15-3.15V6.15C15.15 4.41 13.74 3 12 3S8.85 4.41 8.85 6.15v4.95c0 1.74 1.41 3.15 3.15 3.15Z"></path>
+            <path d="M6.75 10.65v.45A5.25 5.25 0 0 0 12 16.35a5.25 5.25 0 0 0 5.25-5.25v-.45"></path>
+            <path d="M12 16.35V21"></path>
+            <path d="M8.7 21h6.6"></path>
+          </svg>
+        </span>
+        <span class="site-header__brand-text">The Accountability Report Podcast</span>
+      </a>
+
+      <button
+        class="site-header__menu-button"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-controls="primary-navigation"
+        aria-expanded="false"
+        data-menu-button
+      >
+        <span class="site-header__menu-line" aria-hidden="true"></span>
+        <span class="site-header__menu-line" aria-hidden="true"></span>
+        <span class="site-header__menu-line" aria-hidden="true"></span>
+      </button>
+
+      <nav
+        id="primary-navigation"
+        class="site-header__nav"
+        aria-label="Primary navigation"
+        data-primary-navigation
+      >
+        <a class="site-header__nav-link <%= activePage === 'home' ? 'is-active' : '' %>" href="/">Home</a>
+        <a class="site-header__nav-link <%= activePage === 'about' ? 'is-active' : '' %>" href="/about">About</a>
+        <a class="site-header__nav-link <%= activePage === 'episodes' ? 'is-active' : '' %>" href="/episodes">Episodes</a>
+        <a class="site-header__nav-link <%= activePage === 'reports' ? 'is-active' : '' %>" href="/reports">Reports</a>
+        <a class="site-header__nav-link <%= activePage === 'submit-tip' ? 'is-active' : '' %>" href="/submit-tip">Submit a Tip</a>
+        <a class="site-header__nav-link <%= activePage === 'contact' ? 'is-active' : '' %>" href="/contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="site-main" tabindex="-1">

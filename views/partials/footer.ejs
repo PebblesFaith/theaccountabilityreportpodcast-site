@@ -1,0 +1,80 @@
+<!-- views/partials/footer.ejs -->
+<%
+  const footerYear = new Date().getFullYear();
+%>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="site-container site-footer__top">
+      <section class="site-footer__brand-section" aria-labelledby="footer-brand-heading">
+        <h2 id="footer-brand-heading" class="site-footer__brand-title">
+          The Accountability Report Podcast
+        </h2>
+
+        <p class="site-footer__host-text">
+          Hosted by Sarai Hannah Ajai
+        </p>
+
+        <p class="site-footer__domain-text">
+          TheAccountabilityReportPodcast.com
+        </p>
+
+        <div class="site-footer__gold-rule" aria-hidden="true"></div>
+
+        <p class="site-footer__notice">
+          Official communications for The Accountability Report Podcast should come from
+          domain-based addresses ending in
+          <span>@theaccountabilityreportpodcast.com</span>
+          once active. Gmail is used only for private administrative access and is not the
+          public brand identity of the podcast.
+        </p>
+      </section>
+
+      <section class="site-footer__links-section" aria-labelledby="footer-navigation-heading">
+        <h2 id="footer-navigation-heading" class="site-footer__section-title">
+          Navigate
+        </h2>
+
+        <nav class="site-footer__nav site-footer__nav--columns" aria-label="Footer navigation">
+          <a href="/">Home</a>
+          <a href="/about">About</a>
+          <a href="/episodes">Episodes</a>
+          <a href="/reports">Reports</a>
+          <a href="/submit-tip">Submit a Tip</a>
+          <a href="/contact">Contact</a>
+          <a href="/disclaimer">Disclaimer</a>
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/editorial-policy">Editorial Policy</a>
+          <a href="/corrections-policy">Corrections Policy</a>
+        </nav>
+      </section>
+
+      <section class="site-footer__contact-section" aria-labelledby="footer-contact-heading">
+        <h2 id="footer-contact-heading" class="site-footer__section-title">
+          Future Contact
+        </h2>
+
+        <ul class="site-footer__contact-list">
+          <li>media@theaccountabilityreportpodcast.com</li>
+          <li>tips@theaccountabilityreportpodcast.com</li>
+          <li>contact@theaccountabilityreportpodcast.com</li>
+          <li>legal@theaccountabilityreportpodcast.com</li>
+        </ul>
+
+        <p class="site-footer__contact-note">
+          Domain-based addresses are planned once active.
+        </p>
+      </section>
+    </div>
+
+    <div class="site-footer__bottom">
+      <div class="site-container site-footer__bottom-inner">
+        <p>&copy; <%= footerYear %> The Accountability Report Podcast. All rights reserved.</p>
+        <p>Investigative · Educational · Public-Interest</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/scripts/main.js"></script>
+</body>
+</html>
