@@ -27,7 +27,14 @@ const contentSecurityPolicyDirectives = {
   imgSrc: ["'self'", "data:"],
   objectSrc: ["'none'"],
   scriptSrc: ["'self'"],
-  styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"]
+  scriptSrcAttr: ["'none'"],
+  styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
+
+  /*
+    Safari can upgrade http://localhost to https://localhost when this directive is active.
+    Keep it disabled during local development and enabled only in production.
+  */
+  "upgrade-insecure-requests": IS_PRODUCTION ? [] : null
 };
 
 app.set("view engine", "ejs");
