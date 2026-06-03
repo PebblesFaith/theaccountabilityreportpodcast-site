@@ -1,6 +1,7 @@
 <!-- views/partials/footer.ejs -->
 <%
   const footerYear = new Date().getFullYear();
+  const footerAssetVersion = "20260601-lovable-font-button-polish-01";
 %>
   </main>
 
@@ -75,6 +76,6 @@
     </div>
   </footer>
 
-  <script src="/scripts/main.js"></script>
+  <script src="/scripts/main.js?v=<%= footerAssetVersion %>" defer></script>
 </body>
 </html>

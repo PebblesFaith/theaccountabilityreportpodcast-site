@@ -1,0 +1,132 @@
+<%# views/about.ejs %>
+<%- include("partials/header", {
+  pageTitle: "About",
+  activeNav: "about",
+  pageClass: "about-page",
+  pageStyles: ["/styles/about.css"],
+  metaDescription: "Learn about The Accountability Report Podcast, a public-interest investigative and educational project hosted by Sarai Hannah Ajai."
+}) %>
+
+<section class="about-hero" aria-labelledby="about-page-title">
+  <div class="site-container about-hero__content">
+    <span class="about-kicker">About</span>
+
+    <h1 id="about-page-title" class="about-hero__title">
+      A public-interest investigative and educational project
+    </h1>
+
+    <p class="about-hero__lead">
+      The Accountability Report Podcast is hosted by Sarai Hannah Ajai. It examines
+      documented concerns and accountability questions affecting consumers, small
+      operators, and the public record.
+    </p>
+  </div>
+</section>
+
+<section class="about-body" aria-labelledby="about-overview-title">
+  <div class="site-container about-body__grid">
+    <article class="about-copy">
+      <h2 id="about-overview-title">
+        Hosted by Sarai Hannah Ajai
+      </h2>
+
+      <p>
+        Sarai Hannah Ajai is the host and founder of The Accountability Report Podcast,
+        a public-interest investigative podcast focused on fraud awareness, identity theft
+        documentation, digital misuse, consumer protection concerns, and accountability
+        reporting. The podcast is designed to review documented concerns, public records
+        where available, consumer protection pathways, and practical steps for preserving
+        evidence.
+      </p>
+
+      <h2>
+        Editorial mission
+      </h2>
+
+      <p>
+        The podcast reviews documented concerns, public records where available, consumer
+        protection processes, and practical steps for preserving evidence and reporting
+        suspected fraud. Coverage is framed carefully and factually, with attention to what
+        is reported versus what has been confirmed.
+      </p>
+
+      <h2>
+        Sources and selection
+      </h2>
+
+      <p>
+        Each episode draws on publicly available records, listener-submitted documentation,
+        published agency guidance, and editorial review. Stories are selected for their
+        broader relevance to identity protection, digital account security, intellectual
+        property integrity, and consumer rights.
+      </p>
+
+      <h2>
+        Scope and limitations
+      </h2>
+
+      <p>
+        The podcast does not provide legal, financial, medical, or cybersecurity professional
+        advice. Allegations referenced on the show are discussed as reported concerns unless
+        confirmed by official findings.
+      </p>
+
+      <aside class="about-note" aria-label="Host note">
+        <strong>Host:</strong>
+        <span>
+          Sarai Hannah Ajai produces and hosts The Accountability Report Podcast as an
+          independent public-interest project focused on transparency, documentation, and
+          consumer awareness.
+        </span>
+      </aside>
+    </article>
+
+    <aside class="about-standards" aria-label="Editorial standards">
+      <div class="about-standard-card">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M6.75 4.5h10.5v15H6.75v-15Z"></path>
+          <path d="M9.25 8h5.5"></path>
+          <path d="M9.25 11h5.5"></path>
+          <path d="M9.25 14h3.5"></path>
+        </svg>
+        <h3>Editorial Approach</h3>
+        <p>Careful, document-driven framing of reported concerns.</p>
+      </div>
+
+      <div class="about-standard-card">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M7.5 3.75h9l3 3v12h-15v-15Z"></path>
+          <path d="M16.5 3.75v3h3"></path>
+          <path d="M8.25 12h7.5"></path>
+          <path d="M8.25 15h6"></path>
+        </svg>
+        <h3>Public Records</h3>
+        <p>Use of publicly available records and agency guidance.</p>
+      </div>
+
+      <div class="about-standard-card">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M12 4.5v15"></path>
+          <path d="M5.25 8h13.5"></path>
+          <path d="M7.5 8 4.5 14.25h6L7.5 8Z"></path>
+          <path d="M16.5 8 13.5 14.25h6L16.5 8Z"></path>
+        </svg>
+        <h3>Legally Careful</h3>
+        <p>Distinction between alleged and confirmed findings.</p>
+      </div>
+
+      <div class="about-standard-card">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M12 3.75 19.5 7.5v5.4c0 4.35-2.95 6.9-7.5 7.35-4.55-.45-7.5-3-7.5-7.35V7.5L12 3.75Z"></path>
+          <path d="m9.75 12 1.5 1.5 3-3"></path>
+        </svg>
+        <h3>Listener Safety</h3>
+        <p>Practical steps for protection, preservation, and reporting.</p>
+      </div>
+
+      <div class="about-visual-panel" aria-hidden="true"></div>
+    </aside>
+  </div>
+</section>
+
+<%- include("partials/footer") %>

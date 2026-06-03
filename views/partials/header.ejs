@@ -22,7 +22,12 @@
       ? pageClass
       : "standard-page";
 
-  const assetVersion = "20260601-lovable-font-button-polish-01";
+  const resolvedPageStyles =
+    typeof pageStyles !== "undefined" && Array.isArray(pageStyles)
+      ? pageStyles
+      : [];
+
+  const assetVersion = "20260602-about-page-production-02";
 %>
 <!doctype html>
 <html lang="en">
@@ -52,6 +57,10 @@
   <link rel="stylesheet" type="text/css" href="/styles/footer.css?v=<%= assetVersion %>">
   <link rel="stylesheet" type="text/css" href="/styles/main.css?v=<%= assetVersion %>">
   <link rel="stylesheet" type="text/css" href="/styles/lovable-polish.css?v=<%= assetVersion %>">
+
+  <% resolvedPageStyles.forEach((stylesheetPath) => { %>
+    <link rel="stylesheet" type="text/css" href="<%= stylesheetPath %>?v=<%= assetVersion %>">
+  <% }) %>
 </head>
 
 <body class="<%= bodyClass %>">
@@ -90,12 +99,13 @@
         aria-label="Primary navigation"
         data-primary-navigation
       >
-        <a class="site-header__nav-link <%= activePage === 'home' ? 'is-active' : '' %>" href="/">Home</a>
-        <a class="site-header__nav-link <%= activePage === 'about' ? 'is-active' : '' %>" href="/about">About</a>
-        <a class="site-header__nav-link <%= activePage === 'episodes' ? 'is-active' : '' %>" href="/episodes">Episodes</a>
-        <a class="site-header__nav-link <%= activePage === 'reports' ? 'is-active' : '' %>" href="/reports">Reports</a>
-        <a class="site-header__nav-link <%= activePage === 'submit-tip' ? 'is-active' : '' %>" href="/submit-tip">Submit a Tip</a>
-        <a class="site-header__nav-link <%= activePage === 'contact' ? 'is-active' : '' %>" href="/contact">Contact</a>
+        <a class="site-header__nav-link <%= activePage === 'home' ? 'is-active' : '' %>" href="/" <%= activePage === 'home' ? 'aria-current="page"' : '' %>>Home</a>
+        <a class="site-header__nav-link <%= activePage === 'about' ? 'is-active' : '' %>" href="/about" <%= activePage === 'about' ? 'aria-current="page"' : '' %>>About</a>
+        <a class="site-header__nav-link <%= activePage === 'episodes' ? 'is-active' : '' %>" href="/episodes" <%= activePage === 'episodes' ? 'aria-current="page"' : '' %>>Episodes</a>
+        <a class="site-header__nav-link <%= activePage === 'reports' ? 'is-active' : '' %>" href="/reports" <%= activePage === 'reports' ? 'aria-current="page"' : '' %>>Reports</a>
+        <a class="site-header__nav-link <%= activePage === 'submit-tip' ? 'is-active' : '' %>" href="/submit-tip" <%= activePage === 'submit-tip' ? 'aria-current="page"' : '' %>>Submit a Tip</a>
+        <a class="site-header__nav-link <%= activePage === 'contact' ? 'is-active' : '' %>" href="/contact" <%= activePage === 'contact' ? 'aria-current="page"' : '' %>>Contact</a>
+        <a class="site-header__nav-link <%= activePage === 'disclaimer' ? 'is-active' : '' %>" href="/disclaimer" <%= activePage === 'disclaimer' ? 'aria-current="page"' : '' %>>Disclaimer</a>
       </nav>
     </div>
   </header>
