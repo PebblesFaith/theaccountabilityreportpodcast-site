@@ -1,0 +1,135 @@
+<%# views/reports.ejs %>
+<%- include("partials/header", {
+  pageTitle: "Reports & Case Files",
+  activeNav: "reports",
+  pageClass: "reports-page",
+  pageStyles: ["/styles/reports.css"],
+  metaDescription: "Review documented concerns and public-interest reports from The Accountability Report Podcast."
+}) %>
+
+<section class="reports-hero" aria-labelledby="reports-page-title">
+  <div class="site-container reports-hero__content">
+    <span class="reports-kicker">Reports &amp; Case Files</span>
+
+    <h1 id="reports-page-title" class="reports-hero__title">
+      Documented concerns and public-interest reviews
+    </h1>
+
+    <p class="reports-hero__lead">
+      Written reports presented for documentation, education, and public-interest review.
+    </p>
+  </div>
+</section>
+
+<section class="reports-catalog" aria-labelledby="reports-catalog-title">
+  <div class="site-container">
+    <h2 id="reports-catalog-title" class="screen-reader-text">
+      Reports and case files
+    </h2>
+
+    <div class="reports-grid">
+      <article class="report-card">
+        <div class="report-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" focusable="false">
+            <path d="M7.5 4.5h9l3 3v12h-15v-15Z"></path>
+            <path d="M16.5 4.5v3h3"></path>
+            <path d="M8.25 12h7.5"></path>
+            <path d="M8.25 15h7.5"></path>
+          </svg>
+        </div>
+
+        <div class="report-card__content">
+          <p class="report-card__meta">
+            <span>Documented Concern</span>
+            <span>In Review</span>
+          </p>
+
+          <h3>Pattern of Account Access Anomalies Across Linked Services</h3>
+
+          <p>
+            A working summary of reported login alerts, session inconsistencies, and
+            recovery-flow irregularities submitted by listeners.
+          </p>
+        </div>
+      </article>
+
+      <article class="report-card">
+        <div class="report-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" focusable="false">
+            <circle cx="12" cy="12" r="8.25"></circle>
+            <path d="M12 7.5v5l3.25 2"></path>
+          </svg>
+        </div>
+
+        <div class="report-card__content">
+          <p class="report-card__meta">
+            <span>Timeline Review</span>
+            <span>Draft</span>
+          </p>
+
+          <h3>Sequence of Events Following a Reported Email Compromise</h3>
+
+          <p>
+            A reconstructed timeline assembled from publicly available notifications and
+            listener-supplied records.
+          </p>
+        </div>
+      </article>
+
+      <article class="report-card">
+        <div class="report-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" focusable="false">
+            <circle cx="10.75" cy="10.75" r="5.75"></circle>
+            <path d="m15.25 15.25 4.5 4.5"></path>
+          </svg>
+        </div>
+
+        <div class="report-card__content">
+          <p class="report-card__meta">
+            <span>Public-Interest Report</span>
+            <span>Outline</span>
+          </p>
+
+          <h3>Online Impersonation and Small-Business Brand Misuse</h3>
+
+          <p>
+            A structured review of recurring impersonation patterns affecting independent
+            professionals and small brands.
+          </p>
+        </div>
+      </article>
+
+      <article class="report-card">
+        <div class="report-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" focusable="false">
+            <path d="M12 3.75 19.5 7.5v5.4c0 4.35-2.95 6.9-7.5 7.35-4.55-.45-7.5-3-7.5-7.35V7.5L12 3.75Z"></path>
+            <path d="m9.75 12 1.5 1.5 3-3"></path>
+          </svg>
+        </div>
+
+        <div class="report-card__content">
+          <p class="report-card__meta">
+            <span>Consumer Protection Review</span>
+            <span>Planned</span>
+          </p>
+
+          <h3>Navigating Dispute, Recovery, and Reporting Channels</h3>
+
+          <p>
+            An overview of how consumers escalate concerns through institutional,
+            regulatory, and platform-level channels.
+          </p>
+        </div>
+      </article>
+    </div>
+
+    <aside class="reports-notice" aria-label="Reports publication notice">
+      <p>
+        Reports are presented for documentation, education, and public-interest review.
+        Allegations are discussed as reported concerns unless confirmed by official findings.
+      </p>
+    </aside>
+  </div>
+</section>
+
+<%- include("partials/footer") %>

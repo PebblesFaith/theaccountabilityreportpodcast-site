@@ -1,0 +1,248 @@
+/* public/styles/episodes.css */
+
+/*
+  The Accountability Report Podcast
+  Episodes page styles.
+*/
+
+.episodes-page {
+  background: var(--color-background);
+}
+
+.episodes-hero {
+  border-bottom: 1px solid rgba(208, 216, 225, 0.78);
+  background: #eef3f4;
+  padding: clamp(4.5rem, 9vw, 7.2rem) 0 clamp(4.4rem, 8vw, 6.6rem);
+}
+
+/*
+  Keep the hero content aligned with the first episode card.
+  Do not narrow this container separately from .site-container.
+*/
+.episodes-hero__content {
+  max-width: none;
+}
+
+.episodes-kicker {
+  display: inline-flex;
+  margin-bottom: 1.1rem;
+  color: var(--color-accent);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.34em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.episodes-hero__title {
+  max-width: 720px;
+  margin: 0;
+  color: var(--color-primary);
+  font-family: var(--font-heading);
+  font-size: clamp(2.45rem, 5.4vw, 4.45rem);
+  font-weight: 500;
+  letter-spacing: -0.045em;
+  line-height: 1.02;
+}
+
+.episodes-hero__lead {
+  max-width: 690px;
+  margin: 1.35rem 0 0;
+  color: var(--color-charcoal);
+  font-size: clamp(1rem, 1.35vw, 1.12rem);
+  font-weight: 500;
+  line-height: 1.72;
+}
+
+.episodes-catalog {
+  background: var(--color-background);
+  padding: clamp(3.5rem, 7vw, 5.3rem) 0 clamp(4.5rem, 8vw, 6.2rem);
+}
+
+.episodes-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.45rem;
+}
+
+.episode-card {
+  display: flex;
+  min-width: 0;
+  min-height: 15.2rem;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid rgba(176, 188, 203, 0.95);
+  background: rgba(255, 255, 255, 0.74);
+  padding: clamp(1.2rem, 2.2vw, 1.55rem);
+}
+
+.episode-card__topline {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  color: var(--color-accent);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.32em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.episode-card__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.38rem;
+  color: var(--color-charcoal);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.24em;
+  white-space: nowrap;
+}
+
+.episode-card__status svg,
+.episode-card__tag svg,
+.episode-card__link svg {
+  display: inline-block;
+  flex: 0 0 auto;
+  width: 0.95rem;
+  height: 0.95rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.75;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.episode-card h3 {
+  max-width: 32rem;
+  margin: 1.15rem 0 0.7rem;
+  color: var(--color-primary);
+  font-family: var(--font-heading);
+  font-size: clamp(1.12rem, 1.65vw, 1.35rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+.episode-card__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.32rem;
+  width: fit-content;
+  background: #e5edf4;
+  color: var(--color-primary);
+  font-size: 0.72rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.28rem 0.55rem;
+}
+
+.episode-card p {
+  margin: 1.05rem 0 0;
+  color: var(--color-charcoal);
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.68;
+}
+
+.episode-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  width: fit-content;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.24);
+  color: var(--color-primary);
+  font-size: 0.88rem;
+  font-weight: 800;
+  margin-top: auto;
+  padding-top: 1.25rem;
+  padding-bottom: 0.25rem;
+  text-decoration: none;
+}
+
+.episode-card__link:hover,
+.episode-card__link:focus,
+.episode-card__link:focus-visible {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.episodes-note {
+  max-width: 980px;
+  margin: 2.35rem 0 0;
+  color: var(--color-charcoal);
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.7;
+}
+
+.screen-reader-text {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+  padding: 0;
+  margin: -1px;
+}
+
+@media (max-width: 980px) {
+  .episodes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .episode-card {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 720px) {
+  .episodes-hero {
+    padding-top: 4rem;
+    padding-bottom: 4.2rem;
+  }
+
+  .episodes-hero__title {
+    font-size: clamp(2.2rem, 11vw, 3.25rem);
+  }
+
+  .episodes-catalog {
+    padding-top: 3rem;
+  }
+
+  .episode-card__topline {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  .episode-card__status {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 520px) {
+  .episodes-kicker,
+  .episode-card__topline,
+  .episode-card__status {
+    font-size: 0.64rem;
+  }
+
+  .episodes-kicker {
+    letter-spacing: 0.28em;
+  }
+
+  .episode-card {
+    padding: 1.1rem;
+  }
+
+  .episode-card p,
+  .episodes-note {
+    font-size: 0.88rem;
+  }
+}

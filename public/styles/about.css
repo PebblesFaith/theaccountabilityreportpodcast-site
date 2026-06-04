@@ -15,8 +15,12 @@
   padding: clamp(4.5rem, 9vw, 7.2rem) 0 clamp(4.4rem, 8vw, 6.6rem);
 }
 
+/*
+  Keep the About hero aligned with the body content grid.
+  Do not narrow this container separately from .site-container.
+*/
 .about-hero__content {
-  max-width: 980px;
+  max-width: none;
 }
 
 .about-kicker {
@@ -31,18 +35,18 @@
 }
 
 .about-hero__title {
-  max-width: 800px;
+  max-width: 780px;
   margin: 0;
   color: var(--color-primary);
   font-family: var(--font-heading);
-  font-size: clamp(2.45rem, 4.4vw, 3.45rem);
+  font-size: clamp(2.45rem, 5.4vw, 4.45rem);
   font-weight: 500;
   letter-spacing: -0.045em;
   line-height: 1.02;
 }
 
 .about-hero__lead {
-  max-width: 800px;
+  max-width: 760px;
   margin: 1.35rem 0 0;
   color: var(--color-charcoal);
   font-size: clamp(1rem, 1.35vw, 1.12rem);

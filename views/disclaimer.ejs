@@ -1,0 +1,54 @@
+<%# views/disclaimer.ejs %>
+<%- include("partials/header", {
+  pageTitle: "Disclaimer",
+  activeNav: "disclaimer",
+  pageClass: "disclaimer-page",
+  pageStyles: ["/styles/disclaimer.css"],
+  metaDescription: "Read the editorial and legal disclaimer for The Accountability Report Podcast."
+}) %>
+
+<section class="disclaimer-hero" aria-labelledby="disclaimer-page-title">
+  <div class="site-container disclaimer-hero__content">
+    <span class="disclaimer-kicker">Disclaimer</span>
+
+    <h1 id="disclaimer-page-title" class="disclaimer-hero__title">
+      Editorial and legal disclaimer
+    </h1>
+  </div>
+</section>
+
+<section class="disclaimer-content" aria-labelledby="disclaimer-content-title">
+  <div class="site-container disclaimer-content__inner">
+    <h2 id="disclaimer-content-title" class="screen-reader-text">
+      Disclaimer details
+    </h2>
+
+    <div class="disclaimer-copy">
+      <p>
+        The Accountability Report Podcast provides investigative, educational, and
+        public-interest commentary. The podcast does not provide legal, financial,
+        medical, cybersecurity, or professional investigative advice. Allegations are
+        discussed as reported concerns unless confirmed by official findings. Listeners
+        should consult qualified professionals or appropriate agencies for case-specific
+        guidance.
+      </p>
+
+      <p>
+        Submission of a story tip does not guarantee publication, investigation, legal
+        advice, or agency action, and does not establish a confidential, professional,
+        or legal relationship with the podcast or its host.
+      </p>
+
+      <aside class="disclaimer-note" aria-label="Official communication notice">
+        <p>
+          Official communications for The Accountability Report Podcast should come from
+          domain-based addresses ending in
+          <strong>@theaccountabilityreportpodcast.com</strong>
+          once active.
+        </p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<%- include("partials/footer") %>

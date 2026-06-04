@@ -1,0 +1,204 @@
+<%# views/episodes.ejs %>
+<%- include("partials/header", {
+  pageTitle: "Episodes",
+  activeNav: "episodes",
+  pageClass: "episodes-page",
+  pageStyles: ["/styles/episodes.css"],
+  metaDescription: "Explore upcoming investigative and educational episodes from The Accountability Report Podcast."
+}) %>
+
+<section class="episodes-hero" aria-labelledby="episodes-page-title">
+  <div class="site-container episodes-hero__content">
+    <span class="episodes-kicker">Episodes</span>
+
+    <h1 id="episodes-page-title" class="episodes-hero__title">
+      Investigative and educational episodes
+    </h1>
+
+    <p class="episodes-hero__lead">
+      Each episode is structured around documented concerns, practical steps, and a
+      clear explanation of reporting pathways.
+    </p>
+  </div>
+</section>
+
+<section class="episodes-catalog" aria-labelledby="episodes-catalog-title">
+  <div class="site-container">
+    <h2 id="episodes-catalog-title" class="screen-reader-text">
+      Episode catalog
+    </h2>
+
+    <div class="episodes-grid">
+      <article class="episode-card">
+        <div class="episode-card__topline">
+          <span>Episode 01</span>
+
+          <span class="episode-card__status">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M7.5 4.5v3"></path>
+              <path d="M16.5 4.5v3"></path>
+              <path d="M5.25 6.75h13.5v12H5.25v-12Z"></path>
+              <path d="M5.25 10h13.5"></path>
+            </svg>
+            Coming Soon
+          </span>
+        </div>
+
+        <h3>Understanding Identity Theft Documentation</h3>
+
+        <span class="episode-card__tag">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="m4.5 12 7.5-7.5h7.5v7.5L12 19.5 4.5 12Z"></path>
+            <circle cx="16" cy="8" r="1"></circle>
+          </svg>
+          Identity Theft
+        </span>
+
+        <p>
+          A walkthrough of the records, affidavits, and timelines that strengthen an
+          identity theft case — and the common gaps that weaken one.
+        </p>
+
+        <a class="episode-card__link" href="/episodes" data-coming-soon>
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M6.75 10.5v3"></path>
+            <path d="M17.25 10.5v3"></path>
+            <path d="M7.5 16.5a6 6 0 0 1 9 0"></path>
+            <path d="M4.5 13.5c0-4.14 3.36-7.5 7.5-7.5s7.5 3.36 7.5 7.5"></path>
+          </svg>
+          Platform Link Coming Soon
+        </a>
+      </article>
+
+      <article class="episode-card">
+        <div class="episode-card__topline">
+          <span>Episode 02</span>
+
+          <span class="episode-card__status">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M7.5 4.5v3"></path>
+              <path d="M16.5 4.5v3"></path>
+              <path d="M5.25 6.75h13.5v12H5.25v-12Z"></path>
+              <path d="M5.25 10h13.5"></path>
+            </svg>
+            Coming Soon
+          </span>
+        </div>
+
+        <h3>How to Preserve Evidence After a Digital Account Concern</h3>
+
+        <span class="episode-card__tag">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="m4.5 12 7.5-7.5h7.5v7.5L12 19.5 4.5 12Z"></path>
+            <circle cx="16" cy="8" r="1"></circle>
+          </svg>
+          Digital Security
+        </span>
+
+        <p>
+          Practical, step-by-step guidance on capturing screenshots, headers, metadata,
+          and account logs before evidence disappears.
+        </p>
+
+        <a class="episode-card__link" href="/episodes" data-coming-soon>
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M6.75 10.5v3"></path>
+            <path d="M17.25 10.5v3"></path>
+            <path d="M7.5 16.5a6 6 0 0 1 9 0"></path>
+            <path d="M4.5 13.5c0-4.14 3.36-7.5 7.5-7.5s7.5 3.36 7.5 7.5"></path>
+          </svg>
+          Platform Link Coming Soon
+        </a>
+      </article>
+
+      <article class="episode-card">
+        <div class="episode-card__topline">
+          <span>Episode 03</span>
+
+          <span class="episode-card__status">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M7.5 4.5v3"></path>
+              <path d="M16.5 4.5v3"></path>
+              <path d="M5.25 6.75h13.5v12H5.25v-12Z"></path>
+              <path d="M5.25 10h13.5"></path>
+            </svg>
+            Coming Soon
+          </span>
+        </div>
+
+        <h3>FTC, FBI IC3, and Consumer Complaint Pathways</h3>
+
+        <span class="episode-card__tag">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="m4.5 12 7.5-7.5h7.5v7.5L12 19.5 4.5 12Z"></path>
+            <circle cx="16" cy="8" r="1"></circle>
+          </svg>
+          Consumer Protection
+        </span>
+
+        <p>
+          A clear map of where to file what — and what each agency can and cannot do
+          for an individual complainant.
+        </p>
+
+        <a class="episode-card__link" href="/episodes" data-coming-soon>
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M6.75 10.5v3"></path>
+            <path d="M17.25 10.5v3"></path>
+            <path d="M7.5 16.5a6 6 0 0 1 9 0"></path>
+            <path d="M4.5 13.5c0-4.14 3.36-7.5 7.5-7.5s7.5 3.36 7.5 7.5"></path>
+          </svg>
+          Platform Link Coming Soon
+        </a>
+      </article>
+
+      <article class="episode-card">
+        <div class="episode-card__topline">
+          <span>Episode 04</span>
+
+          <span class="episode-card__status">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M7.5 4.5v3"></path>
+              <path d="M16.5 4.5v3"></path>
+              <path d="M5.25 6.75h13.5v12H5.25v-12Z"></path>
+              <path d="M5.25 10h13.5"></path>
+            </svg>
+            Coming Soon
+          </span>
+        </div>
+
+        <h3>Protecting a Small Business Brand Online</h3>
+
+        <span class="episode-card__tag">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="m4.5 12 7.5-7.5h7.5v7.5L12 19.5 4.5 12Z"></path>
+            <circle cx="16" cy="8" r="1"></circle>
+          </svg>
+          Brand Integrity
+        </span>
+
+        <p>
+          How small operators document impersonation, intellectual property misuse,
+          and reputation attacks across major platforms.
+        </p>
+
+        <a class="episode-card__link" href="/episodes" data-coming-soon>
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M6.75 10.5v3"></path>
+            <path d="M17.25 10.5v3"></path>
+            <path d="M7.5 16.5a6 6 0 0 1 9 0"></path>
+            <path d="M4.5 13.5c0-4.14 3.36-7.5 7.5-7.5s7.5 3.36 7.5 7.5"></path>
+          </svg>
+          Platform Link Coming Soon
+        </a>
+      </article>
+    </div>
+
+    <p class="episodes-note">
+      Podcast platform links will be added here once publishing channels are active.
+      Listed dates and run order are placeholders.
+    </p>
+  </div>
+</section>
+
+<%- include("partials/footer") %>
