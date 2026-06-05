@@ -42,7 +42,7 @@
 }
 
 .submit-tip-hero__lead {
-  max-width: 700px;
+  max-width: 740px;
   margin: 1.35rem 0 0;
   color: var(--color-charcoal);
   font-size: clamp(1rem, 1.35vw, 1.12rem);
@@ -56,12 +56,88 @@
 }
 
 .submit-tip-section__inner {
-  display: flex;
-  justify-content: center;
+  display: block;
+}
+
+.submit-tip-layout {
+  display: grid;
+  grid-template-columns: minmax(18rem, 0.82fr) minmax(0, 1.18fr);
+  gap: clamp(1.4rem, 3vw, 2.2rem);
+  align-items: start;
+}
+
+.submit-tip-guidance {
+  border: 1px solid rgba(176, 188, 203, 0.95);
+  background: #fbfaf6;
+  padding: clamp(1.35rem, 3vw, 2rem);
+}
+
+.submit-tip-guidance__label,
+.tip-form__eyebrow {
+  display: inline-flex;
+  margin-bottom: 0.8rem;
+  color: var(--color-accent);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.28em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.submit-tip-guidance h2 {
+  margin: 0;
+  color: var(--color-primary);
+  font-family: var(--font-heading);
+  font-size: clamp(1.65rem, 3vw, 2.35rem);
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  line-height: 1.08;
+}
+
+.submit-tip-guidance p {
+  margin: 1rem 0 0;
+  color: var(--color-charcoal);
+  font-size: 0.94rem;
+  font-weight: 500;
+  line-height: 1.68;
+}
+
+.submit-tip-guidance__panel {
+  margin-top: 1.25rem;
+  border-top: 1px solid rgba(176, 188, 203, 0.95);
+  padding-top: 1.15rem;
+}
+
+.submit-tip-guidance__panel h3 {
+  margin: 0;
+  color: var(--color-primary);
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.submit-tip-guidance__panel ul {
+  display: grid;
+  gap: 0.55rem;
+  margin: 0.85rem 0 0;
+  padding-left: 1.05rem;
+  color: var(--color-charcoal);
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.55;
+}
+
+.submit-tip-guidance__note {
+  border-left: 2px solid var(--color-accent);
+  background: #edf4f7;
+  padding: 0.95rem 1rem;
 }
 
 .tip-form {
-  width: min(100%, 720px);
+  width: 100%;
   border: 1px solid rgba(176, 188, 203, 0.95);
   background: rgba(255, 255, 255, 0.74);
   padding: clamp(1.45rem, 3vw, 2.15rem);
@@ -97,6 +173,10 @@
   stroke-linejoin: round;
 }
 
+.tip-form__eyebrow {
+  margin-bottom: 0.45rem;
+}
+
 .tip-form__notice h2 {
   margin: 0;
   color: var(--color-primary);
@@ -117,6 +197,22 @@
 
 .tip-form__notice--warning p {
   margin: 0;
+}
+
+.tip-form__fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.tip-form__legend {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
 
 .tip-form__grid {
@@ -147,6 +243,8 @@
 
 .tip-form__field label span {
   color: var(--color-accent);
+  font-size: 0.62rem;
+  letter-spacing: 0.16em;
 }
 
 .tip-form__field input,
@@ -174,8 +272,28 @@
   opacity: 1;
 }
 
+.tip-form__field input::placeholder,
 .tip-form__field textarea::placeholder {
-  color: rgba(40, 48, 60, 0.45);
+  color: rgba(40, 48, 60, 0.44);
+}
+
+.tip-form__hint {
+  margin: -0.1rem 0 0;
+  color: rgba(40, 48, 60, 0.68);
+  font-size: 0.78rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.tip-form__upload-preview {
+  border: 1px dashed rgba(140, 148, 159, 0.95);
+  background: #f3f6f7;
+  color: rgba(40, 48, 60, 0.72);
+  cursor: not-allowed;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.5;
+  padding: 1rem;
 }
 
 .tip-form__checkbox {
@@ -224,6 +342,12 @@
   padding: 0.85rem 1.25rem;
 }
 
+@media (max-width: 920px) {
+  .submit-tip-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 720px) {
   .submit-tip-hero {
     padding-top: 4rem;
@@ -257,7 +381,8 @@
     letter-spacing: 0.28em;
   }
 
-  .tip-form {
+  .tip-form,
+  .submit-tip-guidance {
     padding: 1.1rem;
   }
 

@@ -93,111 +93,198 @@
     </h1>
 
     <p class="submit-tip-hero__lead">
-      Tips help shape future investigative reporting. Please keep submissions factual
-      and avoid sensitive personal identifiers.
+      Tips help shape future investigative reporting. Online submissions are currently
+      inactive while privacy, storage, review, and intake procedures are finalized.
     </p>
   </div>
 </section>
 
 <section class="submit-tip-section" aria-labelledby="submit-tip-form-title">
   <div class="site-container submit-tip-section__inner">
-    <form class="tip-form" aria-labelledby="submit-tip-form-title">
-      <div class="tip-form__notice tip-form__notice--status">
-        <div class="tip-form__notice-content">
-          <h2 id="submit-tip-form-title">Form not yet active</h2>
-          <p>
-            Story tip submissions are not yet active. This form is currently a website
-            design placeholder while privacy, storage, and review procedures are being
-            finalized.
-          </p>
-        </div>
-      </div>
+    <div class="submit-tip-layout">
+      <aside class="submit-tip-guidance" aria-labelledby="submit-tip-guidance-title">
+        <span class="submit-tip-guidance__label">Intake Status</span>
 
-      <div class="tip-form__notice tip-form__notice--warning">
-        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-          <path d="M12 3.75 21 19.5H3L12 3.75Z"></path>
-          <path d="M12 9v4.5"></path>
-          <path d="M12 16.5h.01"></path>
-        </svg>
+        <h2 id="submit-tip-guidance-title">
+          Online submissions are not active yet.
+        </h2>
 
         <p>
-          Please do not submit passwords, Social Security numbers, full account numbers,
-          medical records, or other sensitive personal information through this form.
+          The Accountability Report Podcast is preparing a structured intake workflow
+          before accepting online story tips. The preview form shows the planned
+          information categories, but it does not transmit, store, or process data.
         </p>
-      </div>
 
-      <div class="tip-form__grid">
-        <div class="tip-form__field">
-          <label for="tipName">Name <span>*</span></label>
-          <input id="tipName" name="tipName" type="text" disabled>
+        <div class="submit-tip-guidance__panel">
+          <h3>Before activation, this workflow needs:</h3>
+
+          <ul>
+            <li>Privacy and consent language</li>
+            <li>Retention and review procedures</li>
+            <li>Spam protection</li>
+            <li>Secure storage rules</li>
+            <li>Administrative access controls</li>
+            <li>Submission review status tracking</li>
+          </ul>
         </div>
 
-        <div class="tip-form__field">
-          <label for="tipEmail">Email <span>*</span></label>
-          <input id="tipEmail" name="tipEmail" type="email" disabled>
+        <p class="submit-tip-guidance__note">
+          Please do not send passwords, Social Security numbers, full account numbers,
+          medical records, or other sensitive identifiers through this website.
+        </p>
+      </aside>
+
+      <form
+        class="tip-form"
+        aria-labelledby="submit-tip-form-title"
+        aria-describedby="submit-tip-form-status"
+        data-status="inactive"
+        novalidate
+      >
+        <div class="tip-form__notice tip-form__notice--status">
+          <div class="tip-form__notice-content">
+            <p class="tip-form__eyebrow">Feature Preview</p>
+
+            <h2 id="submit-tip-form-title">Submit a Story Tip</h2>
+
+            <p id="submit-tip-form-status">
+              This form is currently inactive. It is displayed as a design preview
+              while privacy, storage, review, and intake procedures are finalized.
+            </p>
+          </div>
         </div>
 
-        <div class="tip-form__field">
-          <label for="tipCategory">Topic Category</label>
-          <select id="tipCategory" name="tipCategory" disabled>
-            <option>Select a category</option>
-            <option>Identity Theft</option>
-            <option>Digital Security</option>
-            <option>Consumer Protection</option>
-            <option>Brand Integrity</option>
-            <option>Public Records</option>
-            <option>Other Documented Concern</option>
-          </select>
+        <div class="tip-form__notice tip-form__notice--warning">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M12 3.75 21 19.5H3L12 3.75Z"></path>
+            <path d="M12 9v4.5"></path>
+            <path d="M12 16.5h.01"></path>
+          </svg>
+
+          <p>
+            Do not submit sensitive personal identifiers through this inactive preview.
+            The future intake workflow will require a dedicated privacy and review process.
+          </p>
         </div>
 
-        <div class="tip-form__field">
-          <label for="incidentDate">Date of Incident</label>
-          <input id="incidentDate" name="incidentDate" type="date" disabled>
-        </div>
+        <fieldset class="tip-form__fieldset" disabled aria-disabled="true">
+          <legend class="tip-form__legend">
+            Inactive story tip preview fields
+          </legend>
 
-        <div class="tip-form__field tip-form__field--full">
-          <label for="tipSummary">Summary of Concern <span>*</span></label>
-          <textarea
-            id="tipSummary"
-            name="tipSummary"
-            rows="6"
-            placeholder="Briefly describe what happened, when it happened, who was involved, and what documentation exists. Do not include sensitive identifiers."
-            disabled
-          ></textarea>
-        </div>
+          <div class="tip-form__grid">
+            <div class="tip-form__field">
+              <label for="tipName">Name <span>Optional</span></label>
+              <input
+                id="tipName"
+                name="tipName"
+                type="text"
+                autocomplete="name"
+                placeholder="Your name"
+              >
+            </div>
 
-        <div class="tip-form__field tip-form__field--full">
-          <label for="supportingDocumentation">
-            Supporting Documentation Description
+            <div class="tip-form__field">
+              <label for="tipEmail">Email <span>Optional</span></label>
+              <input
+                id="tipEmail"
+                name="tipEmail"
+                type="email"
+                autocomplete="email"
+                placeholder="name@example.com"
+              >
+            </div>
+
+            <div class="tip-form__field">
+              <label for="tipCategory">Topic Category</label>
+              <select id="tipCategory" name="tipCategory">
+                <option>Select a category</option>
+                <option>Identity Theft</option>
+                <option>Digital Security</option>
+                <option>Consumer Protection</option>
+                <option>Brand Integrity</option>
+                <option>Public Records</option>
+                <option>Other Documented Concern</option>
+              </select>
+            </div>
+
+            <div class="tip-form__field">
+              <label for="incidentDate">Date or Timeframe</label>
+              <input
+                id="incidentDate"
+                name="incidentDate"
+                type="text"
+                placeholder="Example: May 2026"
+              >
+            </div>
+
+            <div class="tip-form__field tip-form__field--full">
+              <label for="primaryEntity">Organization, Platform, or Subject</label>
+              <input
+                id="primaryEntity"
+                name="primaryEntity"
+                type="text"
+                placeholder="Example: company, agency, platform, account, or public record source"
+              >
+            </div>
+
+            <div class="tip-form__field tip-form__field--full">
+              <label for="tipSummary">Summary of Concern</label>
+              <textarea
+                id="tipSummary"
+                name="tipSummary"
+                rows="6"
+                placeholder="Briefly describe what happened, when it happened, who was involved, and what documentation exists. Do not include sensitive identifiers."
+              ></textarea>
+
+              <p class="tip-form__hint">
+                Keep the summary factual. Avoid passwords, full account numbers,
+                medical details, and private identifiers.
+              </p>
+            </div>
+
+            <div class="tip-form__field tip-form__field--full">
+              <label for="supportingDocumentation">
+                Supporting Documentation Description
+              </label>
+              <textarea
+                id="supportingDocumentation"
+                name="supportingDocumentation"
+                rows="4"
+                placeholder="Briefly describe the types of records you have, such as screenshots, emails, notices, public records, or account alerts."
+              ></textarea>
+            </div>
+
+            <div class="tip-form__field tip-form__field--full">
+              <label for="documentUploadPreview">Document Upload</label>
+
+              <div class="tip-form__upload-preview" id="documentUploadPreview">
+                File upload is not available in this inactive preview.
+              </div>
+            </div>
+          </div>
+
+          <label class="tip-form__checkbox">
+            <input type="checkbox">
+
+            <span>
+              I confirm the information provided is accurate to the best of my knowledge,
+              and I understand that submission review would not create a confidential,
+              legal, or agency relationship.
+            </span>
           </label>
-          <textarea
-            id="supportingDocumentation"
-            name="supportingDocumentation"
-            rows="4"
-            placeholder="Briefly describe the types of documents or records you have (e.g. screenshots, emails, public records). Do not include sensitive identifiers."
-            disabled
-          ></textarea>
-        </div>
-      </div>
+        </fieldset>
 
-      <label class="tip-form__checkbox">
-        <input type="checkbox" disabled>
-        <span>
-          I confirm the information provided is accurate to the best of my knowledge and
-          I consent to its review for potential editorial use. I understand this submission
-          does not establish a confidential or legal relationship.
-        </span>
-      </label>
+        <p class="tip-form__fine-print">
+          Submission of a tip does not guarantee publication, investigation, legal advice,
+          or agency action. This page is currently a static preview only.
+        </p>
 
-      <p class="tip-form__fine-print">
-        Submission of a tip does not guarantee publication, investigation, legal advice,
-        or agency action.
-      </p>
-
-      <button class="tip-form__button" type="button" disabled>
-        Submission Feature Coming Soon
-      </button>
-    </form>
+        <button class="tip-form__button" type="button" disabled>
+          Submission Feature Coming Soon
+        </button>
+      </form>
+    </div>
   </div>
 </section>
 
@@ -278,4 +365,4 @@
 
   <script src="/scripts/main.js?v=20260601-lovable-font-button-polish-01" defer></script>
 </body>
-</html>
+</html>        </button>
