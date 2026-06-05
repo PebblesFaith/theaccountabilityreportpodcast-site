@@ -1,15 +1,58 @@
-# theaccountabilityreportpodcast-site
-Official website repository for The Accountability Report Podcast.
-
 # The Accountability Report Podcast Website
 
-This repository contains the official website project for **The Accountability Report Podcast**, hosted by **Sarai Hannah Ajai**.
+Official website repository for **The Accountability Report Podcast**, hosted by **Sarai Hannah Ajai**.
 
 The Accountability Report Podcast is a public-interest investigative podcast focused on fraud awareness, identity theft documentation, digital misuse, consumer protection concerns, online impersonation issues, intellectual property misuse, documentation review, and accountability reporting.
 
-This website will serve as the official online presence for the podcast, including public information about the show, episode listings, written reports or case-file summaries, future podcast platform links, contact information, policy notices, and legally careful public-interest documentation.
+The website serves as the official online presence for the podcast, including public information about the show, episode listings, written reports or case-file summaries, future podcast platform links, contact information, policy notices, and legally careful public-interest documentation.
 
-The production version of this website is intended to be built with:
+## Live Website
+
+Primary domain:
+
+**https://theaccountabilityreportpodcast.com**
+
+Secondary related domain:
+
+**https://accountabilityreportpodcast.com**
+
+The primary production website is deployed through **GitHub Pages** with the publishing source set to:
+
+```txt
+main / docs
+```
+
+## Current Production Status
+
+Completed public pages:
+
+* Home
+* About
+* Episodes
+* Reports
+* Submit a Tip
+* Contact
+* Disclaimer
+* Privacy Policy
+* Editorial Policy
+* Corrections Policy
+
+Completed production setup:
+
+* GitHub Pages deployment
+* IONOS DNS configuration
+* HTTPS verification
+* Custom domain connection
+* Static EJS export workflow
+* Favicon and browser tab branding
+* Header microphone brand icon refinement
+* `robots.txt`
+* `sitemap.xml`
+* Static public pages under `docs/`
+
+## Technology Stack
+
+The source website is built with:
 
 * Node.js
 * Express
@@ -17,28 +60,159 @@ The production version of this website is intended to be built with:
 * JavaScript
 * CSS
 
-The current design direction is based on a visual prototype created with Lovable AI. Lovable AI is being used only as a design reference. The final production implementation will be built separately in the Node.js / Express / EJS stack for direct control, maintainability, and consistency with the developer’s preferred workflow.
+The deployed GitHub Pages version is generated as static HTML, CSS, JavaScript, and image assets under the `docs/` folder.
 
-Planned website sections include:
+## Local Development
 
-* Home
-* About
-* Episodes
-* Reports / Case Files
-* Submit a Story Tip
-* Contact
-* Disclaimer
-* Privacy Policy
-* Editorial Policy
-* Corrections Policy
+Install dependencies:
 
-Story tip submission features are planned for a later phase and should not collect sensitive information until privacy, storage, and review procedures are finalized.
+```bash
+npm install
+```
 
-Official domain:
+Run the local Express development server:
 
-**TheAccountabilityReportPodcast.com**
+```bash
+npm run dev
+```
 
-Secondary related domain:
+Run syntax checks:
 
-**AccountabilityReportPodcast.com**
+```bash
+npm run check
+```
 
+Generate favicon assets:
+
+```bash
+npm run favicons
+```
+
+Export the static GitHub Pages version:
+
+```bash
+npm run export
+```
+
+Preview the static export locally:
+
+```bash
+python3 -m http.server 8080 --directory docs
+```
+
+Then open:
+
+```txt
+http://localhost:8080
+```
+
+## Static Export Workflow
+
+Source files are maintained in:
+
+```txt
+views/
+public/
+routes/
+scripts/
+```
+
+Static deployment files are generated into:
+
+```txt
+docs/
+```
+
+Important rule:
+
+Do not manually edit generated files inside `docs/` unless there is a specific emergency fix. Most changes should be made in the source files under `views/`, `public/`, or `scripts/`, then regenerated with:
+
+```bash
+npm run export
+```
+
+## Branding Assets
+
+The favicon and browser tab branding use a microphone icon with the project color palette:
+
+```txt
+Background: #0e2036
+Microphone: #c69e58
+```
+
+Master favicon artwork is stored under:
+
+```txt
+public/images/branding/
+```
+
+Generated favicon and app icon files are stored under:
+
+```txt
+public/
+```
+
+and copied into:
+
+```txt
+docs/
+```
+
+during static export.
+
+## Submit a Tip Status
+
+The **Submit a Tip** page is currently a public inactive preview.
+
+Current status:
+
+* Text fields are shown for design and workflow preview.
+* Online submissions are not active yet.
+* File uploads are disabled.
+* No form data is currently submitted or stored.
+* No database or Google Sheet intake is connected yet.
+
+A future Phase 1 intake workflow may use:
+
+```txt
+GitHub Pages form
+→ Google Apps Script Web App
+→ Private Google Sheet
+```
+
+This future workflow should remain text-only at first and should not request or collect sensitive identifiers, confidential documents, passwords, Social Security numbers, full account numbers, medical records, or uploaded evidence files.
+
+Submit a Tip activation should not occur until the following are finalized:
+
+* Privacy language
+* Consent checkbox language
+* Prohibited-information warning
+* Google Sheet column structure
+* Google Apps Script endpoint
+* Spam protection approach
+* Test submission process
+* Review procedure
+* Retention procedure
+
+## Planned Future Work
+
+Planned production improvements:
+
+* Open Graph and social-sharing metadata
+* Social preview image
+* README deployment documentation refinements
+* Secondary domain redirect review
+* Future podcast platform links
+* Future episode listing updates
+* Future text-only Submit a Tip intake workflow
+* Later secure backend/database workflow if traffic or sensitivity increases
+
+## Design Direction
+
+The visual direction is based on a professional editorial style originally explored with Lovable AI as a design reference. The production implementation is maintained separately in the Node.js, Express, EJS, JavaScript, and CSS stack for direct control, maintainability, and consistency with the developer’s workflow.
+
+## Repository Notes
+
+This repository contains the website source code, static export scripts, generated GitHub Pages output, public assets, favicon branding, and policy pages for The Accountability Report Podcast.
+
+Sensitive local files such as `.env` should remain ignored and must not be committed.
