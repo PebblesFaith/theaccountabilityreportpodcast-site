@@ -8,7 +8,8 @@
     "start": "node app.js",
     "dev": "nodemon app.js",
     "check": "node --check app.js",
-    "export": "node scripts/exportStaticSite.js"
+    "export": "node scripts/exportStaticSite.js",
+    "favicons": "node scripts/generateFavicons.js"
   },
   "keywords": [
     "podcast",
@@ -29,7 +30,8 @@
     "morgan": "^1.10.0"
   },
   "devDependencies": {
-    "nodemon": "^3.1.9"
+    "nodemon": "^3.1.9",
+    "sharp": "^0.34.5"
   },
   "engines": {
     "node": ">=20.0.0"
