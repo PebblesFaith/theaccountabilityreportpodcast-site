@@ -8,7 +8,7 @@ The website serves as the official online presence for the podcast, including pu
 
 ## Live Website
 
-Primary domain:
+Primary production domain:
 
 **https://theaccountabilityreportpodcast.com**
 
@@ -16,13 +16,15 @@ Secondary related domain:
 
 **https://accountabilityreportpodcast.com**
 
-The primary production website is deployed through **GitHub Pages** with the publishing source set to:
+The production website is deployed through **GitHub Pages** with the publishing source set to:
 
 ```txt
 main / docs
 ```
 
 ## Current Production Status
+
+The website is currently live, deployed, and production-polished.
 
 Completed public pages:
 
@@ -37,7 +39,7 @@ Completed public pages:
 * Editorial Policy
 * Corrections Policy
 
-Completed production setup:
+Completed deployment and production polish:
 
 * GitHub Pages deployment
 * IONOS DNS configuration
@@ -48,6 +50,10 @@ Completed production setup:
 * Header microphone brand icon refinement
 * `robots.txt`
 * `sitemap.xml`
+* Canonical URLs
+* Open Graph metadata
+* Twitter/X card metadata
+* Social sharing preview image
 * Static public pages under `docs/`
 
 ## Technology Stack
@@ -60,7 +66,7 @@ The source website is built with:
 * JavaScript
 * CSS
 
-The deployed GitHub Pages version is generated as static HTML, CSS, JavaScript, and image assets under the `docs/` folder.
+The deployed GitHub Pages version is generated as static HTML, CSS, JavaScript, image assets, favicon assets, metadata, `robots.txt`, and `sitemap.xml` under the `docs/` folder.
 
 ## Local Development
 
@@ -131,6 +137,12 @@ Do not manually edit generated files inside `docs/` unless there is a specific e
 npm run export
 ```
 
+The `public/CNAME` file preserves the GitHub Pages custom domain during static export. The exported copy appears at:
+
+```txt
+docs/CNAME
+```
+
 ## Branding Assets
 
 The favicon and browser tab branding use a microphone icon with the project color palette:
@@ -159,6 +171,55 @@ docs/
 ```
 
 during static export.
+
+The Open Graph and social sharing preview image is stored at:
+
+```txt
+public/images/branding/accountability-report-social-card.png
+```
+
+and exported to:
+
+```txt
+docs/images/branding/accountability-report-social-card.png
+```
+
+Live production social preview image:
+
+```txt
+https://theaccountabilityreportpodcast.com/images/branding/accountability-report-social-card.png
+```
+
+## SEO and Sharing Files
+
+The website includes:
+
+```txt
+public/robots.txt
+public/sitemap.xml
+```
+
+which export to:
+
+```txt
+docs/robots.txt
+docs/sitemap.xml
+```
+
+Live production URLs:
+
+```txt
+https://theaccountabilityreportpodcast.com/robots.txt
+https://theaccountabilityreportpodcast.com/sitemap.xml
+```
+
+The shared header partial includes:
+
+* canonical URL support
+* Open Graph title, description, URL, and image metadata
+* Twitter/X card metadata
+* favicon links
+* theme color metadata
 
 ## Submit a Tip Status
 
@@ -194,16 +255,39 @@ Submit a Tip activation should not occur until the following are finalized:
 * Review procedure
 * Retention procedure
 
+## Recommended Pre-Commit Checklist
+
+Before committing production website changes:
+
+```bash
+npm run check
+node --check scripts/exportStaticSite.js
+node --check scripts/generateFavicons.js
+npm run export
+git status --short --branch
+```
+
+For local static preview:
+
+```bash
+python3 -m http.server 8080 --directory docs
+```
+
+After previewing, stop the server with:
+
+```txt
+Control + C
+```
+
 ## Planned Future Work
 
 Planned production improvements:
 
-* Open Graph and social-sharing metadata
-* Social preview image
-* README deployment documentation refinements
 * Secondary domain redirect review
+* README maintenance as new deployment steps are added
 * Future podcast platform links
 * Future episode listing updates
+* Future reports/case-file summaries
 * Future text-only Submit a Tip intake workflow
 * Later secure backend/database workflow if traffic or sensitivity increases
 
@@ -213,6 +297,6 @@ The visual direction is based on a professional editorial style originally explo
 
 ## Repository Notes
 
-This repository contains the website source code, static export scripts, generated GitHub Pages output, public assets, favicon branding, and policy pages for The Accountability Report Podcast.
+This repository contains the website source code, static export scripts, generated GitHub Pages output, public assets, favicon branding, social preview branding, metadata, search discovery files, and policy pages for The Accountability Report Podcast.
 
 Sensitive local files such as `.env` should remain ignored and must not be committed.
