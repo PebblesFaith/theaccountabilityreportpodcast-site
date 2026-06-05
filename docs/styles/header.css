@@ -38,23 +38,25 @@
 }
 
 .site-header__brand-mark {
-  display: inline-grid;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   flex: 0 0 auto;
-  width: 2.35rem;
-  height: 2.35rem;
-  place-items: center;
-  border-radius: 0.18rem;
-  background: var(--color-primary);
-  color: var(--color-primary-foreground);
-  box-shadow: none;
+  width: 2.2rem;
+  height: 2.2rem;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
 }
 
 .site-header__brand-icon {
-  width: 1.15rem;
-  height: 1.15rem;
+  display: block;
+  width: 2.2rem;
+  height: 2.2rem;
   fill: none;
-  stroke: currentColor;
-  stroke-width: 1.65;
+  stroke: #c69e58;
+  stroke-width: 1.9;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
@@ -291,4 +293,40 @@
     width: 2.65rem;
     height: 2.65rem;
   }
+}
+
+/* Header brand microphone icon sizing */
+.site-header .site-header__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.72rem;
+}
+
+.site-header .site-header__brand-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 2.35rem;
+  width: 2.35rem;
+  height: 2.35rem;
+  min-width: 2.35rem;
+  min-height: 2.35rem;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+.site-header .site-header__brand-icon {
+  display: block;
+  width: 2.05rem;
+  height: 2.05rem;
+  min-width: 2.05rem;
+  min-height: 2.05rem;
+  fill: none;
+  stroke: #c69e58;
+  stroke-width: 1.95;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
