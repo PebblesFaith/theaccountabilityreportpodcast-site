@@ -1,0 +1,206 @@
+/* public/styles/footer.css */
+
+/*
+  The Accountability Report Podcast
+  Footer styles.
+*/
+
+.site-footer {
+  border-top: 1px solid rgba(248, 246, 240, 0.1);
+  background: var(--color-primary);
+  color: var(--color-primary-foreground);
+}
+
+.site-footer__top {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(13rem, 0.85fr) minmax(15rem, 0.95fr);
+  align-items: start;
+  gap: clamp(2rem, 5vw, 4rem);
+  padding-block: clamp(3.25rem, 7vw, 5.25rem);
+}
+
+.site-footer__brand-section,
+.site-footer__links-section,
+.site-footer__contact-section {
+  min-width: 0;
+}
+
+.site-footer__brand-title {
+  max-width: 22rem;
+  margin: 0;
+  color: var(--color-primary-foreground);
+  font-family: var(--font-heading);
+  font-size: clamp(1.35rem, 2.3vw, 1.9rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+}
+
+.site-footer__host-text,
+.site-footer__domain-text {
+  margin: 0.65rem 0 0;
+  color: rgba(248, 246, 240, 0.72);
+  line-height: 1.55;
+}
+
+.site-footer__domain-text {
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.site-footer__gold-rule {
+  width: 3.25rem;
+  height: 1px;
+  margin: 1.4rem 0 1.35rem;
+  background: var(--color-accent);
+}
+
+.site-footer__notice {
+  max-width: 30rem;
+  margin: 0;
+  color: rgba(248, 246, 240, 0.64);
+  font-size: 0.93rem;
+  line-height: 1.72;
+}
+
+.site-footer__notice span {
+  color: var(--color-accent);
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+.site-footer__section-title {
+  margin: 0 0 1.25rem;
+  color: rgba(248, 246, 240, 0.58);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.28em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.site-footer__nav {
+  display: grid;
+  gap: 0.78rem;
+}
+
+.site-footer__nav--columns {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 2rem;
+}
+
+.site-footer__nav a {
+  width: fit-content;
+  color: rgba(248, 246, 240, 0.8);
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    color var(--transition-standard),
+    transform var(--transition-standard);
+}
+
+.site-footer__nav a:hover,
+.site-footer__nav a:focus,
+.site-footer__nav a:focus-visible {
+  color: var(--color-accent);
+  text-decoration: none;
+  transform: translateX(2px);
+}
+
+.site-footer__contact-list {
+  display: grid;
+  gap: 0.72rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-footer__contact-list li {
+  color: rgba(248, 246, 240, 0.8);
+  font-size: 0.95rem;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.site-footer__contact-note {
+  margin: 1rem 0 0;
+  color: rgba(248, 246, 240, 0.55);
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+.site-footer__bottom {
+  border-top: 1px solid rgba(248, 246, 240, 0.12);
+}
+
+.site-footer__bottom-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 1.25rem;
+}
+
+.site-footer__bottom p {
+  margin: 0;
+  color: rgba(248, 246, 240, 0.56);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 1100px) {
+  .site-footer__top {
+    grid-template-columns: minmax(0, 1fr) minmax(15rem, 0.75fr);
+  }
+
+  .site-footer__brand-section {
+    grid-column: 1 / -1;
+  }
+
+  .site-footer__notice {
+    max-width: 42rem;
+  }
+}
+
+@media (max-width: 760px) {
+  .site-footer__top {
+    grid-template-columns: 1fr;
+    gap: 2.35rem;
+  }
+
+  .site-footer__nav--columns {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 1.5rem;
+  }
+
+  .site-footer__bottom-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 520px) {
+  .site-footer__top {
+    padding-block: 3rem;
+  }
+
+  .site-footer__brand-title {
+    max-width: 100%;
+    font-size: 1.2rem;
+  }
+
+  .site-footer__notice,
+  .site-footer__contact-list li,
+  .site-footer__contact-note,
+  .site-footer__bottom p {
+    font-size: 0.82rem;
+  }
+
+  .site-footer__section-title {
+    font-size: 0.68rem;
+  }
+
+  .site-footer__nav--columns {
+    grid-template-columns: 1fr;
+  }
+}
