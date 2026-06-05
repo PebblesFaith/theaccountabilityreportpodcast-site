@@ -29,27 +29,27 @@
 
     const assetVersion = "20260602-about-page-production-02";
 
-  const siteUrl = "https://theaccountabilityreportpodcast.com";
+    const siteUrl = "https://theaccountabilityreportpodcast.com";
 
-  const resolvedCanonicalPath =
-    typeof canonicalPath === "string" && canonicalPath.trim().length > 0
-      ? canonicalPath
-      : "/";
+    const resolvedCanonicalPath =
+      typeof canonicalPath === "string" && canonicalPath.trim().length > 0
+        ? canonicalPath
+        : "/";
 
-  const resolvedCanonicalUrl =
-    resolvedCanonicalPath === "/"
-      ? `${siteUrl}/`
-      : `${siteUrl}${resolvedCanonicalPath.endsWith("/") ? resolvedCanonicalPath : `${resolvedCanonicalPath}/`}`;
+    const resolvedCanonicalUrl =
+      resolvedCanonicalPath === "/"
+        ? `${siteUrl}/`
+        : `${siteUrl}${resolvedCanonicalPath.endsWith("/") ? resolvedCanonicalPath : `${resolvedCanonicalPath}/`}`;
 
-  const resolvedOgImage =
-    typeof ogImage === "string" && ogImage.trim().length > 0
-      ? ogImage
-      : `${siteUrl}/images/branding/accountability-report-social-card.png`;
+    const resolvedOgImage =
+      typeof ogImage === "string" && ogImage.trim().length > 0
+        ? ogImage
+        : `${siteUrl}/images/branding/accountability-report-social-card.png`;
 
-  const resolvedOgImageAlt =
-    typeof ogImageAlt === "string" && ogImageAlt.trim().length > 0
-      ? ogImageAlt
-      : "The Accountability Report Podcast social sharing preview image.";
+    const resolvedOgImageAlt =
+      typeof ogImageAlt === "string" && ogImageAlt.trim().length > 0
+        ? ogImageAlt
+        : "The Accountability Report Podcast social sharing preview image.";
 %>
 
 
@@ -72,21 +72,21 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
 
-  <link rel="canonical" href="<%= resolvedCanonicalUrl %>">
+ <link rel="canonical" href="<%= resolvedCanonicalUrl %>">
 
-  <meta property="og:title" content="<%= resolvedPageTitle %>">
-  <meta property="og:description" content="<%= resolvedMetaDescription %>">
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="<%= siteName %>">
-  <meta property="og:url" content="<%= resolvedCanonicalUrl %>">
-  <meta property="og:image" content="<%= resolvedOgImage %>">
-  <meta property="og:image:alt" content="<%= resolvedOgImageAlt %>">
+<meta property="og:title" content="<%= resolvedPageTitle %>">
+<meta property="og:description" content="<%= resolvedMetaDescription %>">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="<%= siteName %>">
+<meta property="og:url" content="<%= resolvedCanonicalUrl %>">
+<meta property="og:image" content="<%= resolvedOgImage %>">
+<meta property="og:image:alt" content="<%= resolvedOgImageAlt %>">
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="<%= resolvedPageTitle %>">
-  <meta name="twitter:description" content="<%= resolvedMetaDescription %>">
-  <meta name="twitter:image" content="<%= resolvedOgImage %>">
-  <meta name="twitter:image:alt" content="<%= resolvedOgImageAlt %>">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="<%= resolvedPageTitle %>">
+<meta name="twitter:description" content="<%= resolvedMetaDescription %>">
+<meta name="twitter:image" content="<%= resolvedOgImage %>">
+<meta name="twitter:image:alt" content="<%= resolvedOgImageAlt %>">
 
   <title><%= resolvedPageTitle %></title>
 
