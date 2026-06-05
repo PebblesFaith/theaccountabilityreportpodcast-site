@@ -1,0 +1,383 @@
+/* public/styles/lovable-polish.css */
+
+/*
+  The Accountability Report Podcast
+  Lovable AI visual-polish overrides.
+
+  Purpose:
+  - Match the Lovable AI homepage more closely.
+  - Reduce oversized homepage typography.
+  - Convert pill buttons into rectangular editorial buttons.
+  - Tighten footer typography and spacing.
+  - Keep the current Node.js / Express / EJS production structure.
+*/
+
+/* Global rectangular button treatment */
+
+.button {
+  min-height: 2.65rem;
+  border-radius: 0.08rem;
+  font-size: 0.88rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  padding: 0.78rem 1.05rem;
+}
+
+.button:hover,
+.button:focus {
+  transform: none;
+}
+
+.hero__button {
+  min-width: 11.25rem;
+}
+
+/* Header typography tuning */
+
+.site-header__inner {
+  min-height: 4.35rem;
+}
+
+.site-header__brand-mark {
+  width: 2.15rem;
+  height: 2.15rem;
+}
+
+.site-header__brand-icon {
+  width: 1.05rem;
+  height: 1.05rem;
+}
+
+.site-header__brand-text {
+  font-size: 0.98rem;
+  letter-spacing: -0.01em;
+}
+
+.site-header__nav {
+  gap: 1.25rem;
+}
+
+.site-header__nav-link {
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+/* Homepage hero typography tuning */
+
+.hero--dark {
+  padding: clamp(4rem, 7vw, 6.35rem) 0 clamp(4rem, 7vw, 6.15rem);
+}
+
+.hero__eyebrow {
+  font-size: 0.68rem;
+  letter-spacing: 0.34em;
+  padding: 0.52rem 0.72rem;
+}
+
+.hero__title {
+  max-width: 720px;
+  font-size: clamp(2.65rem, 5.9vw, 4.85rem);
+  font-weight: 500;
+  letter-spacing: -0.05em;
+  line-height: 1.02;
+}
+
+.hero__lead {
+  max-width: 590px;
+  font-size: clamp(0.98rem, 1.45vw, 1.12rem);
+  line-height: 1.7;
+}
+
+.hero__record-panel {
+  padding: clamp(1.2rem, 2.4vw, 1.75rem);
+}
+
+.hero__record-kicker {
+  font-size: 0.68rem;
+  letter-spacing: 0.32em;
+}
+
+.hero__record-row {
+  grid-template-columns: 3.6rem 1fr;
+  padding: 0.9rem 0;
+}
+
+.hero__record-row span {
+  font-size: 1.12rem;
+}
+
+.hero__record-row strong {
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+}
+
+.hero__record-note {
+  font-size: 0.84rem;
+  line-height: 1.6;
+}
+
+/* Mission section typography */
+
+.mission-section {
+  padding: clamp(3rem, 6vw, 4.65rem) 0;
+}
+
+.section-label {
+  font-size: 0.68rem;
+  letter-spacing: 0.34em;
+}
+
+.mission-section__title {
+  max-width: 860px;
+  font-size: clamp(1.65rem, 3.2vw, 2.55rem);
+  font-weight: 500;
+  line-height: 1.18;
+}
+
+.mission-section__text {
+  max-width: 680px;
+  font-size: 0.98rem;
+  line-height: 1.7;
+}
+
+/* Section title sizing */
+
+.section-title {
+  font-size: clamp(1.75rem, 3vw, 2.45rem);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+}
+
+.section-link {
+  font-size: 0.88rem;
+}
+
+/* Reporting pillars */
+
+.pillars-section,
+.episodes-section,
+.reports-preview-section,
+.tip-cta-section {
+  padding: clamp(3.25rem, 6.2vw, 4.9rem) 0;
+}
+
+.pillar-card {
+  min-height: 9rem;
+  padding: 1.25rem;
+}
+
+.pillar-card__icon svg {
+  width: 1.18rem;
+  height: 1.18rem;
+}
+
+.pillar-card h3 {
+  font-size: 1.08rem;
+  font-weight: 500;
+}
+
+.pillar-card p {
+  font-size: 0.9rem;
+  line-height: 1.62;
+}
+
+/* Featured episode cards */
+
+.platform-notice {
+  padding: 0.92rem 1rem;
+}
+
+.platform-notice p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.feature-card {
+  padding: 1.25rem;
+}
+
+.feature-card__topline {
+  font-size: 0.66rem;
+  letter-spacing: 0.25em;
+}
+
+.feature-card h3 {
+  font-size: clamp(1.12rem, 1.65vw, 1.35rem);
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.feature-card p {
+  font-size: 0.9rem;
+  line-height: 1.68;
+}
+
+.feature-tag {
+  font-size: 0.72rem;
+  padding: 0.22rem 0.55rem;
+}
+
+.feature-card__link {
+  font-size: 0.88rem;
+}
+
+/* Report preview cards */
+
+.report-preview-card {
+  padding: 1.25rem;
+}
+
+.report-preview-card__icon {
+  width: 2.45rem;
+  height: 2.45rem;
+}
+
+.report-preview-card__icon svg {
+  width: 1.05rem;
+  height: 1.05rem;
+}
+
+.report-preview-card__meta {
+  font-size: 0.66rem;
+  letter-spacing: 0.25em;
+}
+
+.report-preview-card h3 {
+  font-size: 1.08rem;
+  font-weight: 500;
+}
+
+.report-preview-card p:last-child {
+  font-size: 0.9rem;
+  line-height: 1.66;
+}
+
+/* Have Information CTA */
+
+.tip-cta {
+  border-radius: 0;
+  padding: clamp(1.3rem, 2.6vw, 2rem);
+}
+
+.tip-cta h2 {
+  font-size: clamp(1.45rem, 2.5vw, 1.9rem);
+  font-weight: 500;
+}
+
+.tip-cta p {
+  font-size: 0.92rem;
+  line-height: 1.66;
+}
+
+/* Remove rounded visual softness from homepage cards */
+
+.hero__record-panel,
+.pillar-grid,
+.pillar-card,
+.platform-notice,
+.feature-card,
+.report-preview-card,
+.report-preview-card__icon,
+.tip-cta,
+.content-panel,
+.card,
+.notice-box,
+.form-input,
+.form-select,
+.form-textarea,
+.checkbox-field,
+.contact-list li {
+  border-radius: 0;
+}
+
+/* Keep small badges slightly rectangular, not circular */
+
+.badge,
+.feature-tag,
+.eyebrow {
+  border-radius: 0.08rem;
+}
+
+/* Footer Lovable-style typography and spacing */
+
+.site-footer__top {
+  padding-block: clamp(3rem, 6vw, 4.45rem);
+}
+
+.site-footer__brand-title {
+  max-width: 20rem;
+  font-size: clamp(1.18rem, 1.85vw, 1.55rem);
+  font-weight: 500;
+}
+
+.site-footer__host-text,
+.site-footer__domain-text {
+  font-size: 0.9rem;
+}
+
+.site-footer__notice {
+  max-width: 29rem;
+  font-size: 0.84rem;
+  line-height: 1.68;
+}
+
+.site-footer__section-title {
+  font-size: 0.68rem;
+  letter-spacing: 0.28em;
+}
+
+.site-footer__nav {
+  gap: 0.65rem;
+}
+
+.site-footer__nav a {
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.site-footer__contact-list {
+  gap: 0.6rem;
+}
+
+.site-footer__contact-list li {
+  font-size: 0.86rem;
+}
+
+.site-footer__contact-note {
+  font-size: 0.82rem;
+}
+
+.site-footer__bottom p {
+  font-size: 0.8rem;
+}
+
+/* Mobile refinements */
+
+@media (max-width: 920px) {
+  .site-header__nav-link {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 680px) {
+  .hero__title {
+    font-size: clamp(2.45rem, 13vw, 3.65rem);
+  }
+
+  .hero__lead {
+    font-size: 0.98rem;
+  }
+
+  .button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .mission-section__title {
+    font-size: clamp(1.5rem, 8vw, 2.15rem);
+  }
+
+  .section-title {
+    font-size: clamp(1.55rem, 8vw, 2.1rem);
+  }
+}
